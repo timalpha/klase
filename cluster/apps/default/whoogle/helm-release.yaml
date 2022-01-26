@@ -12,3 +12,21 @@ spec:
         kind: HelmRepository
         name: k8s-at-home-charts
   interval: 1m0s
+  install:
+    createNamespace: true
+  ingress:
+    main:
+      enabled: true
+      ingressClassName: "traefik"
+      annotations:
+        cert-manager.io/cluster-issuer: "letsencrypt-production"
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+      hosts:
+        - host: "w.${SECRET_DOMAIN}"
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - hosts:
+            - "w.${SECRET_DOMAIN}"
+          secretName: "whoogle-tls"
