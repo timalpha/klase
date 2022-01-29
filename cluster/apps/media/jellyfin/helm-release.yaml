@@ -24,12 +24,6 @@ spec:
       TZ: "Europe/Stockholm"
       JELLYFIN_CACHE_DIR: "/config/cache"
 
-    service:
-      main:
-        type: LoadBalancer
-        externalIPs:
-          - "${LB_JELLYFIN}"
-        externalTrafficPolicy: Local
     ingress:
       main:
         enabled: true
