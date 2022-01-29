@@ -10,7 +10,7 @@
 
 ## 💻 Nodes
 | Device              | Count | RAM  | OS Disk | Storage Disk | Function      | Operating System    |
-|---------------------|-------|------|------------------------|---------------|---------------------|
+|---------------------|-------|------|---------|--------------|---------------|---------------------|
 | Dell Optiplex 3040  | 1     | 4GB  | 120 SSD | 1TB NVMe     | Master/worker | Ubuntu Server 21.10 |
 
 ## :handshake:&nbsp; Community
