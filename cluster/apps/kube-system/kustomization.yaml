@@ -5,4 +5,4 @@ resources:
   - metrics-server
   - reflector
   - reloader
-  - intel-gpu_plugin
+  - intel-gpu-plugin
