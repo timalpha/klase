@@ -60,7 +60,7 @@ spec:
         volumeSpec:
           nfs:
             server: "${NAS_ADDR}"
-            path: /mnt/zg0/media/media
+            path: /mnt/zp0/media/media
         mountPath: /media
         readOnly: true
       transcode:
