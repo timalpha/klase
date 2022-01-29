@@ -33,6 +33,7 @@ spec:
       supplementalGroups:
         - 44
         - 109
+        - 1000
     ingress:
       main:
         enabled: true
