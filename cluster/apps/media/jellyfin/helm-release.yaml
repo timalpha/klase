@@ -23,7 +23,10 @@ spec:
     env:
       TZ: "Europe/Stockholm"
       JELLYFIN_CACHE_DIR: "/config/cache"
-
+    podSecurityContext:
+      supplementalGroups:
+        - 44
+        - 109
     ingress:
       main:
         enabled: true
@@ -60,7 +63,7 @@ spec:
     resources:
       requests:
         cpu: 1
-        memory: 3Gi
+        memory: 1Gi
         gpu.intel.com/i915: 1
       limits:
         memory: 4Gi
