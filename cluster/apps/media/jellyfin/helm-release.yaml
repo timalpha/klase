@@ -55,7 +55,7 @@ spec:
         type: custom
         volumeSpec:
           nfs:
-            server: "${NFS_SERVER}"
+            server: "${NAS_SERVER}"
             path: /zg0/media/media
         mountPath: /media
         readOnly: true
