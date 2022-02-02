@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 appVersion: 0.21.7
-description: libreddit helm package
+description: Private front-end for Reddit
 name: libreddit
 version: 0.0.1
 kubeVersion: ">=1.16.0-0"
@@ -12,8 +12,8 @@ icon: https://raw.githubusercontent.com/spikecodes/libreddit/master/static/logo.
 sources:
   - https://github.com/spikecodes/libreddit/
 maintainers:
-  - name: libreddit
-    email: libreddit@libreddit.com
+  - name: timalpha
+    email: timalpha@home.arpa
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com

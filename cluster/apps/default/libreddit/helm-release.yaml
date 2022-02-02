@@ -8,21 +8,13 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: libreddit
+      chart: /charts/libreddit
       sourceRef:
         kind: GitRepository
-        name: flux-system
+        name: klase
         namespace: flux-system
       interval: 5m
   values:
-    image:
-      repository: spikecodes/libreddit
-      tag: v0.21.7
-    service:
-      main:
-        ports:
-          http:
-            port: 8080
     ingress:
       main:
         enabled: true
