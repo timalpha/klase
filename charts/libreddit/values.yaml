@@ -9,7 +9,7 @@ image:
   # -- image repository
   repository: spikecodes/libreddit
   # -- image tag
-  tag: 0.21.7
+  tag: latest
   # -- image pull policy
   pullPolicy: IfNotPresent
 

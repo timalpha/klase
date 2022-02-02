@@ -11,7 +11,7 @@ spec:
       chart: /charts/libreddit
       sourceRef:
         kind: GitRepository
-        name: klase
+        name: flux-system
         namespace: flux-system
       interval: 5m
   values:
