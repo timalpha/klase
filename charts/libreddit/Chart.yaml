@@ -1,0 +1,24 @@
+---
+apiVersion: v2
+appVersion: 0.21.7
+description: libreddit helm package
+name: libreddit
+version: 0.0.1
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - libreddit
+home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/libreddit
+icon: https://raw.githubusercontent.com/spikecodes/libreddit/master/static/logo.png
+sources:
+  - https://github.com/spikecodes/libreddit/
+maintainers:
+  - name: libreddit
+    email: libreddit@libreddit.com
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.3.0
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: Initial version
