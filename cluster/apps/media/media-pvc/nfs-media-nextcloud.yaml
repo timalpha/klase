@@ -12,7 +12,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: "truenas.${SECRET_DOMAIN}"
+    server: "${NAS_ADDR}"
     path: "/mnt/zp0/nextcloud"
   mountOptions:
     - nfsvers=3
