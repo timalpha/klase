@@ -58,12 +58,7 @@ spec:
         existingClaim: jellyfin-config-v1
       media:
         enabled: true
-        type: custom
-        volumeSpec:
-          nfs:
-            server: "${NAS_ADDR}"
-            path: /mnt/zp0/media/media
-        mountPath: /media
+        existingClaim: nfs-media-media
         readOnly: true
       transcode:
         enabled: true
