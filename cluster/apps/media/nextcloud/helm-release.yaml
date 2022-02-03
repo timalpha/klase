@@ -87,3 +87,5 @@ spec:
       #     port: 465
       #     name: ${SECRET_MAILGUN_USERNAME}
       #     password: ${SECRET_MAILGUN_PASSWORD}
+    cronjob:
+      enabled: true
