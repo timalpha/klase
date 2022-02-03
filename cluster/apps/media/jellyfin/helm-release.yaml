@@ -55,10 +55,10 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: jellyfin-config-v1
+        existingClaim: jellyfin-config
       media:
         enabled: true
-        existingClaim: nfs-media-media-pvc
+        existingClaim: media-nfs-media-pvc
         readOnly: true
       transcode:
         enabled: true

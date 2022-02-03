@@ -30,10 +30,10 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: nextcloud-config-v1
+        existingClaim: nextcloud-config
       data:
         enabled: true
-        existingClaim: nfs-media-nextcloud-pvc
+        existingClaim: media-nfs-nextcloud-pvc
 
     ingress:
       enabled: true
