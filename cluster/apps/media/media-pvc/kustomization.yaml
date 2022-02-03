@@ -5,3 +5,4 @@ resources:
   - nfs-media-nextcloud.yaml
   - nfs-media-media.yaml
   - jellyfin-config.yaml
+  - nextcloud-config.yaml
