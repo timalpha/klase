@@ -28,10 +28,9 @@ spec:
       supplementalGroups:
         - 1001
     persistence:
-      config:
-        enabled: true
-        existingClaim: nextcloud-config
-      data:
+      enabled: true
+      existingClaim: nextcloud-config
+      nextcloudData:
         enabled: true
         existingClaim: media-nfs-nextcloud-pvc
 
