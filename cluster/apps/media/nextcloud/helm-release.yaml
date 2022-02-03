@@ -58,8 +58,8 @@ spec:
 
     nextcloud:
       host: cloud.${SECRET_DOMAIN}
-      username: ${NEXTCLOUD_ADMIN_USER}
-      password: ${NEXTCLOUD_ADMIN_PASSWORD}
+      username: ${SECRET_NEXTCLOUD_ADMIN_USER}
+      password: ${SECRET_NEXTCLOUD_ADMIN_PASSWORD}
 
       configs:
         proxy.config.php: |-
