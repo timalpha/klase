@@ -42,7 +42,7 @@ spec:
         hajimari.io/enable: "true"
         hajimari.io/icon: "cloud-upload"
         traefik.ingress.kubernetes.io/router.entrypoints: websecure
-        traefik.ingress.kubernetes.io/router.middlewares: collab-nextcloud-dav-redirect@kubernetescrd,collab-hsts@kubernetescrd
+        traefik.ingress.kubernetes.io/router.middlewares: media-nextcloud-dav-redirect@kubernetescrd,media-hsts@kubernetescrd
       tls:
         - secretName: tls.nextcloud
           hosts:
