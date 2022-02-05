@@ -53,3 +53,5 @@ spec:
             port: 49161
             protocol: TCP
             targetPort: 49161
+    config: |
+      network.port_range.set = 49161-49161
