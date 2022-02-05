@@ -52,7 +52,7 @@ spec:
       socket:
         enabled: true
         type: emptyDir
-        medium: Memory
+        #medium: Memory
         mountPath: /tmp
 
     probes:
