@@ -67,6 +67,9 @@ spec:
     cronjob:
       enabled: false
 
+    internalDatabase:
+      enabled: false
+
     externalDatabase:
       enabled: true
       type: postgresql
