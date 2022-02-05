@@ -42,7 +42,7 @@ spec:
             secretName: flood-cert
       data:
         enabled: true
-        existingClaim: media-nfs-downloads
+        existingClaim: media-nfs-downloads-pvc
       config:
         enabled: true
         existingClaim: flood-config
