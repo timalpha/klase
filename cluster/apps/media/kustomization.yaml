@@ -5,3 +5,4 @@ resources:
   - jellyfin
   - nextcloud
   - media-pvc
+  - rtorrent-flood
