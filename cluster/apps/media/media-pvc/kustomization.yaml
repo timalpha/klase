@@ -6,3 +6,4 @@ resources:
   - media-nfs-media.yaml
   - jellyfin-config.yaml
   - nextcloud-config.yaml
+  - nextcloud-postgresql.yaml

@@ -66,3 +66,25 @@ spec:
       #     password: ${SECRET_MAILGUN_PASSWORD}
     cronjob:
       enabled: false
+      initialDelaySeconds: 600
+    startupProbe:
+      enabled: true
+
+    externalDatabase:
+      enabled: true
+      type: postgresql
+      host: nextcloud-postgresql.media
+      user: nextcloud
+      password: ${SECRET_NEXTCLOUD_POSTGRES_PASSWORD}
+      database: nextcloud
+
+    postgresql:
+      enabled: true
+
+      postgresqlUsername: nextcloud
+      postgresqlPassword: ${SECRET_NEXTCLOUD_POSTGRES_PASSWORD}
+      postgresqlDatabase: nextcloud
+
+      persistence:
+        enabled: true
+        existingClaim: nextcloud-postgresql
