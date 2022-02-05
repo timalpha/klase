@@ -7,5 +7,4 @@ resources:
   - jellyfin-config.yaml
   - nextcloud-config.yaml
   - nextcloud-postgresql.yaml
-  - media-nfs-downloads.yaml
   - flood-config.yaml

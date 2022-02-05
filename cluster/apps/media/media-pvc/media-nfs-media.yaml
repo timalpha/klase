@@ -13,7 +13,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: "${NAS_ADDR}"
-    path: "/mnt/zp0/media/media"
+    path: "/mnt/zp0/media"
   mountOptions:
     - nfsvers=3
     - tcp
