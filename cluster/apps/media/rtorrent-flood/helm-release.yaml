@@ -36,7 +36,7 @@ spec:
               - "flood.${SECRET_DOMAIN}"
             secretName: flood-cert
     persistence:
-      data:
+      downloads:
         enabled: true
         existingClaim: media-nfs-downloads-pvc
       config:
