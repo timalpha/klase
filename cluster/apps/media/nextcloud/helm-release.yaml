@@ -67,10 +67,6 @@ spec:
     cronjob:
       enabled: false
 
-    startupProbe:
-      enabled: true
-      initialDelaySeconds: 600
-
     externalDatabase:
       enabled: true
       type: postgresql
