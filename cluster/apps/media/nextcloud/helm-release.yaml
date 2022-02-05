@@ -66,9 +66,10 @@ spec:
       #     password: ${SECRET_MAILGUN_PASSWORD}
     cronjob:
       enabled: false
-      initialDelaySeconds: 600
+
     startupProbe:
       enabled: true
+      initialDelaySeconds: 600
 
     externalDatabase:
       enabled: true
