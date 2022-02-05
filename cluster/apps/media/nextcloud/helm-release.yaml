@@ -65,7 +65,7 @@ spec:
       #     name: ${SECRET_MAILGUN_USERNAME}
       #     password: ${SECRET_MAILGUN_PASSWORD}
     cronjob:
-      enabled: false
+      enabled: true
 
     internalDatabase:
       enabled: false
