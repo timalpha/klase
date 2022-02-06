@@ -27,11 +27,10 @@ spec:
       defaultClassReplicaCount: 1
       defaultFsType: ext4
     defaultSettings:
-      # backupTarget: ${NAS_BACKUP}
-      defaultReplicaCount: 1
+      backupTarget: ${NAS_BACKUP}
       defaultLonghornStaticStorageClass: longhorn
-      defaultDataPath: /mnt/lh01
-      replicaAutoBalance: best-effort
+      defaultDataPath: /mnt/lh01/
+      storageMinimalAvailablePercentage: 10
     ingress:
       enabled: true
       ingressClassName: "traefik"
