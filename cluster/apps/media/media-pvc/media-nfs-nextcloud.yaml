@@ -15,7 +15,7 @@ spec:
     server: "${NAS_ADDR}"
     path: "/mnt/zp0/nextcloud"
   mountOptions:
-    - nfsvers=3
+    - nfsvers=4
     - tcp
     - intr
     - hard
