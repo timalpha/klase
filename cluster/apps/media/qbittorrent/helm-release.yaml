@@ -19,9 +19,6 @@ spec:
   values:
     env:
       TZ: "Europe/Stockholm"
-      UMASK: "022"
-      PUID: 1000
-      PGID: 1000
     settings:
       automaticPortSetup: false
     podSecurityContext:
