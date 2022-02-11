@@ -53,6 +53,11 @@ spec:
       config:
         enabled: true
         existingClaim: flood-config
+      socket:
+        enabled: true
+        type: emptyDir
+        # medium: Memory
+        mountPath: /tmp
     service:
       bittorrent:
         enabled: true
