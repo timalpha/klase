@@ -20,6 +20,10 @@ spec:
     podSecurityContext:
       supplementalGroups:
         - 1001
+    env:
+      FLOOD_OPTION_RUNDIR: /config
+      FLOOD_OPTION_AUTH: "none"
+      FLOOD_OPTION_RTSOCKET: "/tmp/rtorrent.sock"
     ingress:
       main:
         enabled: true
