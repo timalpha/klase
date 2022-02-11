@@ -19,6 +19,9 @@ spec:
   values:
     env:
       TZ: "Europe/Stockholm"
+      UMASK: "022"
+      PUID: 1001
+      PGID: 1001
     settings:
       automaticPortSetup: false
     podSecurityContext:
@@ -31,6 +34,7 @@ spec:
       media:
         enabled: true
         existingClaim: media-nfs-media-pvc
+        mountPath: /media
     service:
       bittorrent:
         enabled: true
