@@ -9,4 +9,4 @@ data:
   METALLB_LB_RANGE: 10.0.10.20-10.0.10.30
   METALLB_TRAEFIK_ADDR: 10.0.10.20
   NAS_ADDR: 10.0.10.10
-  NAS_BACKUP: "nfs://10.0.10.1:/mnt/zp0/backup"
+  NAS_BACKUP: "nfs://10.0.10.10:/mnt/zp0/backup"
