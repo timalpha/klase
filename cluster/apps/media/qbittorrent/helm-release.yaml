@@ -20,13 +20,13 @@ spec:
     env:
       TZ: "Europe/Stockholm"
       UMASK: "022"
-      PUID: 1001
-      PGID: 1001
+      PUID: 1000
+      PGID: 1000
     settings:
       automaticPortSetup: false
     podSecurityContext:
       supplementalGroups:
-        - 1001
+        - 1000
     persistence:
       config:
         enabled: true
