@@ -19,6 +19,8 @@ spec:
   values:
     env:
       TZ: "Europe/Stockholm"
+    settings:
+      automaticPortSetup: false
     podSecurityContext:
       supplementalGroups:
         - 1001
@@ -29,7 +31,6 @@ spec:
       media:
         enabled: true
         existingClaim: media-nfs-media
-
     service:
       bittorrent:
         enabled: true
@@ -46,7 +47,6 @@ spec:
             protocol: TCP
             targetPort: 50413
         externalTrafficPolicy: Local
-
     ingress:
       main:
         enabled: true
