@@ -103,7 +103,7 @@ spec:
       throttle.min_peers.seed.set = 30
       throttle.max_peers.seed.set = 80
       trackers.numwant.set = 80
-      network.port_range.set = 49671-49671
+      network.port_range.set = 50413-50413
       network.max_open_files.set = 600
       network.max_open_sockets.set = 300
       pieces.memory.max.set = 1800M

@@ -4,3 +4,6 @@ kind: Kustomization
 resources:
   - helm-release.yaml
   - middleware.yaml
+  - nextcloud-config.yaml
+  - nextcloud-postgresql.yaml
+  - media-nfs-nextcloud.yaml
