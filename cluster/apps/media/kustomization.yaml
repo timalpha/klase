@@ -5,5 +5,5 @@ resources:
   - jellyfin
 #  - nextcloud
   - media-pvc
-  - rtorrent-flood
-#  - qbittorrent
+#  - rtorrent-flood
+  - qbittorrent
