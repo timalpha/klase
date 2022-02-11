@@ -30,7 +30,7 @@ spec:
         existingClaim: qbittorrent-config
       media:
         enabled: true
-        existingClaim: media-nfs-media
+        existingClaim: media-nfs-media-pvc
     service:
       bittorrent:
         enabled: true
