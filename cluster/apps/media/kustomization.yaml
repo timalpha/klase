@@ -7,3 +7,4 @@ resources:
   - media-pvc
   - rtorrent-flood
 #  - qbittorrent
+  - sonarr
