@@ -19,7 +19,7 @@ spec:
   values:
     podSecurityContext:
       supplementalGroups:
-        - 1001
+        - 1000
     env:
       FLOOD_OPTION_RUNDIR: /config
       FLOOD_OPTION_AUTH: "none"
@@ -52,29 +52,23 @@ spec:
     service:
       bittorrent:
         enabled: true
-        type: ClusterIP
+        type: LoadBalancer
+        externalIPs:
+          - 10.0.10.21
         ports:
           bittorrent:
-            enabled: true
-            port: 49671
+            port: 50413
+            name: bittorrent
             protocol: TCP
-            targetPort: 49671
+            targetPort: 50413
+        externalTrafficPolicy: Local
     probes:
       liveness:
-        enabled: true
-        initialDelaySeconds: 60
-        failureThreshold: 5
-        timeoutSeconds: 10
+        enabled: false
       readiness:
-        enabled: true
-        initialDelaySeconds: 60
-        failureThreshold: 5
-        timeoutSeconds: 10
+        enabled: false
       startup:
-        enabled: true
-        initialDelaySeconds: 10
-        failureThreshold: 30
-        periodSeconds: 10
+        enabled: false
 
     config: |
       session.use_lock.set = no

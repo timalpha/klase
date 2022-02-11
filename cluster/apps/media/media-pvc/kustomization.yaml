@@ -7,5 +7,5 @@ resources:
   - jellyfin-config.yaml
 #  - nextcloud-config.yaml
 #  - nextcloud-postgresql.yaml
-#  - flood-config.yaml
-  - qbittorrent-config.yaml
+  - flood-config.yaml
+#  - qbittorrent-config.yaml
