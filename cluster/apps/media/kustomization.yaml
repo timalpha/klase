@@ -8,3 +8,4 @@ resources:
   - rtorrent-flood
 #  - qbittorrent
   - sonarr
+  - radarr

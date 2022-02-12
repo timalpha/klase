@@ -21,7 +21,7 @@ spec:
       tag: v10.7.7
 
     env:
-      TZ: "Europe/Stockholm"
+      TZ: "${TIMEZONE}"
       JELLYFIN_CACHE_DIR: "/config/cache"
     podSecurityContext:
       # Hardware acceleration using an Intel iGPU w/ QuickSync
