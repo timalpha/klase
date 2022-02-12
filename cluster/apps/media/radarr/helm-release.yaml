@@ -22,10 +22,6 @@ spec:
     env:
       TZ: "${TIMEZONE}"
     podSecurityContext:
-      runAsUser: 568
-      runAsGroup: 568
-      fsGroup: 568
-      fsGroupChangePolicy: "OnRootMismatch"
       supplementalGroups:
         - 1000
     persistence:
