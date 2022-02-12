@@ -19,6 +19,8 @@ spec:
   values:
     env:
       TZ: "${TIMEZONE}"
+      PUID: "568"
+      GUID: "568"
     podSecurityContext:
       runAsUser: 568
       runAsGroup: 568
