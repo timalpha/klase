@@ -20,7 +20,7 @@ spec:
     initContainers:
       update-volume-permission:
         image: busybox
-        command: ["sh", "-c", "chown -R 568:568 /config"]
+        command: ["sh", "-c", "chown -R 1000:1000 /config"]
         volumeMounts:
           - name: config
             mountPath: /config
@@ -28,12 +28,12 @@ spec:
           runAsUser: 0
     env:
       TZ: "${TIMEZONE}"
-      PUID: "568"
-      GUID: "568"
+      PUID: "1000"
+      GUID: "1000"
     podSecurityContext:
-      runAsUser: 568
-      runAsGroup: 568
-      fsGroup: 568
+      runAsUser: 1000
+      runAsGroup: 1000
+      fsGroup: 1000
       fsGroupChangePolicy: "OnRootMismatch"
     persistence:
       config:
