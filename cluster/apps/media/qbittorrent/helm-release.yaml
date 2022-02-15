@@ -17,6 +17,15 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
+    initContainers:
+      update-volume-permission:
+        image: busybox
+        command: ["sh", "-c", "chown -R 1000:1000 /config"]
+        volumeMounts:
+          - name: config
+            mountPath: /config
+        securityContext:
+          runAsUser: 0
     image:
       repository: ghcr.io/k8s-at-home/qbittorrent
       tag: v4.4.0
@@ -43,6 +52,10 @@ spec:
       bittorrent:
         enabled: true
         type: LoadBalancer
+        ipFamilyPolicy: PreferDualStack
+        ipFamilies:
+          - IPv4
+          - IPv6
         externalIPs:
           - 10.0.10.21
         ports:
