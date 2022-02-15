@@ -48,7 +48,7 @@ spec:
           hajimari.io/icon: "subtitles"
           hajimari.io/appName: "bazarr"
           traefik.ingress.kubernetes.io/router.entrypoints: websecure
-          raefik.ingress.kubernetes.io/router.middlewares: networking-internal-auth@kubernetescrd
+          traefik.ingress.kubernetes.io/router.middlewares: networking-internal-auth@kubernetescrd
         hosts:
           - host: "bazarr.${SECRET_DOMAIN}"
             paths:
