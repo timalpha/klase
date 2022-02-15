@@ -17,5 +17,3 @@
 ## :handshake:&nbsp; Community
 
 This cluster in inspired by the work of others shared at [awesome-home-kubernetes](https://github.com/k8s-at-home/awesome-home-kubernetes).
-
-There is also an active [k8s@home Discord](https://discord.gg/7PbmHRK) for this community.
