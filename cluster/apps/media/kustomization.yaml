@@ -11,3 +11,4 @@ resources:
   - radarr
   - prowlarr
   - ombi
+  - bazarr
