@@ -32,3 +32,10 @@ spec:
           - hosts:
               - "w.${SECRET_DOMAIN}"
             secretName: "whoogle-tls"
+    resources:
+      requests:
+        cpu: 15m
+        memory: 184M
+      limits:
+        cpu: 15m
+        memory: 184M

@@ -53,7 +53,8 @@ spec:
             secretName: prowlarr-cert
     resources:
       requests:
-        cpu: "0.04"
-        memory: "256M"
+        cpu: 15m
+        memory: 164M
       limits:
-        memory: "512M"
+        cpu: 15m
+        memory: 164M

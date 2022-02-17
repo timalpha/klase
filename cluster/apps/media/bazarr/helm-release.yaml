@@ -58,3 +58,10 @@ spec:
           - hosts:
               - "bazarr.${SECRET_DOMAIN}"
             secretName: bazarr-cert
+    resources:
+      requests:
+        cpu: 15m
+        memory: 512M
+      limits:
+        cpu: 15m
+        memory: 512M

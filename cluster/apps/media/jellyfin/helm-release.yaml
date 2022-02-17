@@ -68,14 +68,6 @@ spec:
         enabled: true
         type: emptyDir
         medium: Memory
-    resources:
-      requests:
-        cpu: 1
-        memory: 1Gi
-        gpu.intel.com/i915: 1
-      limits:
-        memory: 4Gi
-        gpu.intel.com/i915: 1
     affinity:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:
@@ -85,3 +77,12 @@ spec:
                   operator: In
                   values:
                     - "true"
+    resources:
+      requests:
+        cpu: 15m
+        memory: 1556M
+        gpu.intel.com/i915: 1
+      limits:
+        cpu: 15m
+        memory: 1556M
+        gpu.intel.com/i915: 1
