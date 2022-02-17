@@ -26,7 +26,7 @@ spec:
           kubernetes.io/ingress.class: "traefik"
           cert-manager.io/cluster-issuer: letsencrypt-production
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          traefik.ingress.kubernetes.io/router.middlewares: "network-internal-auth@kubernetescrd"
+          traefik.ingress.kubernetes.io/router.middlewares: "networking-internal-auth@kubernetescrd"
           hajimari.io/enable: "true"
           hajimari.io/icon: "gauge"
         hosts:
