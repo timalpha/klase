@@ -17,8 +17,6 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    vpa:
-      enabled: true
     dashboard:
       ingress:
         enabled: true
