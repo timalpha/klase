@@ -25,3 +25,4 @@ resources:
   - weaveworks-kured-charts.yaml
   - nextcloud-charts.yaml
   - longhorn-charts.yaml
+  - fairwinds-charts.yaml
