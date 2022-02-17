@@ -38,6 +38,7 @@ spec:
         cert-manager.io/cluster-issuer: "letsencrypt-production"
         hajimari.io/enable: "true"
         hajimari.io/icon: "harddisk"
+        hajimari.io/appName: "longhorn"
         traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       host: "longhorn.${SECRET_DOMAIN}"
 
