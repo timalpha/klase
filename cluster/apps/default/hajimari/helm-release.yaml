@@ -29,6 +29,7 @@ spec:
           - networking
           - longhorn-system
           - kube-system
+          - monitoring
       name: "you"
     ingress:
       main:

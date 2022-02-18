@@ -8,3 +8,4 @@ resources:
   - media.yaml
   - longhorn-system.yaml
   - default.yaml
+  - monitoring.yaml
