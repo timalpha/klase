@@ -60,8 +60,8 @@ spec:
             secretName: bazarr-cert
     resources:
       requests:
-        cpu: 15m
-        memory: 512M
+        cpu: 22m
+        memory: 105M
       limits:
-        cpu: 15m
-        memory: 512M
+        cpu: 70m
+        memory: 1567M
