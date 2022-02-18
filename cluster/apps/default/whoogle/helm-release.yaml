@@ -5,6 +5,7 @@ metadata:
   name: whoogle
   namespace: default
 spec:
+  interval: 5m
   chart:
     spec:
       chart: whoogle
@@ -12,7 +13,7 @@ spec:
         kind: HelmRepository
         name: k8s-at-home-charts
         namespace: flux-system
-  interval: 1m0s
+      interval: 5m
   values:
     ingress:
       main:
@@ -38,4 +39,4 @@ spec:
         memory: 105M
       limits:
         cpu: 66m
-        memory: 526M
+        memory: 1024M
