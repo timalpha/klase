@@ -8,3 +8,4 @@ resources:
   - system-upgrade
   - media
   - longhorn-system
+  - monitoring
