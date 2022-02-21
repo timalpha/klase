@@ -9,3 +9,4 @@ resources:
   - media
   - longhorn-system
   - monitoring
+  - security
