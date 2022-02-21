@@ -23,13 +23,7 @@ spec:
     hajimari:
       defaultEnable: false
       namespaceSelector:
-        matchNames:
-          - default
-          - media
-          - networking
-          - longhorn-system
-          - kube-system
-          - monitoring
+        any: true
       name: "you"
     ingress:
       main:

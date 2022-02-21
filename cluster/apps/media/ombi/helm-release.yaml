@@ -16,16 +16,10 @@ spec:
         name: k8s-at-home-charts
         namespace: flux-system
       interval: 5m
+  dependsOn:
+    - name: traefik
+      namespace: networking
   values:
-    initContainers:
-      update-volume-permission:
-        image: busybox
-        command: ["sh", "-c", "chown -R 1000:1000 /config"]
-        volumeMounts:
-          - name: config
-            mountPath: /config
-        securityContext:
-          runAsUser: 0
     env:
       TZ: "${TIMEZONE}"
       PUID: "1000"
