@@ -21,7 +21,7 @@ spec:
       namespace: networking
   values:
     image:
-      repository: goauthentik.io/server
+      repository: ghcr.io/goauthentik/server
       tag: 2022.2.1
     ingress:
       main:
@@ -41,14 +41,22 @@ spec:
           - hosts:
               - "auth.${SECRET_DOMAIN}"
             secretName: authentik-cert
+    geoip:
+      enabled: false
     authentik:
-      log_level: debug
-      postgresql:
-        name: "authentik"
-        user: "authentik"
-        password: ${SECRET_AUTHENTIK_POSTGRES_PASSWORD}
       secret_key: ${SECRET_AUTHENTIK_KEY}
+      log_level: debug
+
+      outposts:
+        docker_image_base: ghcr.io/goauthentik/%(type)s:%(version)s
+
+      postgresql:
+        host: '{{ .Release.Name }}-postgresql'
+        name: authentik
+        user: authentik
+        password: ${SECRET_AUTHENTIK_POSTGRES_PASSWORD}
       redis:
+        host: '{{ .Release.Name }}-redis-master'
         password: ${SECRET_AUTHENTIK_REDIS_PASSWORD}
 
     postgresql:
