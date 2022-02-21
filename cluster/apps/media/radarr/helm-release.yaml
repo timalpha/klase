@@ -59,8 +59,8 @@ spec:
             secretName: radarr-cert
     resources:
       requests:
-        cpu: 34m
-        memory: 380M
+        cpu: 15m
+        memory: 324M
       limits:
-        cpu: 516m
-        memory: 795M
+        cpu: 29m
+        memory: 668M

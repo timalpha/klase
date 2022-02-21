@@ -56,8 +56,8 @@ spec:
             secretName: sonarr-cert
     resources:
       requests:
-        cpu: 34m
-        memory: 380M
+        cpu: 15m
+        memory: 381M
       limits:
-        cpu: 516m
-        memory: 795M
+        cpu: 376m
+        memory: 484M

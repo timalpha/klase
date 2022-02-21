@@ -51,10 +51,10 @@ spec:
           - hosts:
               - "ombi.${SECRET_DOMAIN}"
             secretName: ombi-cert
-    resources:
-      requests:
-        memory: 128Mi
-        cpu: 10m
-      limits:
-        memory: 256Mi
-        cpu: 20m
+      resources:
+        requests:
+          cpu: 15m
+          memory: 105M
+        limits:
+          cpu: 256m
+          memory: 129M
