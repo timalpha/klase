@@ -47,6 +47,8 @@ spec:
         user: "authentik"
         password: ${SECRET_AUTHENTIK_POSTGRES_PASSWORD}
       secret_key: ${SECRET_AUTHENTIK_KEY}
+      redis:
+        password: ${SECRET_AUTHENTIK_REDIS_PASSWORD}
 
     postgresql:
       enabled: true
@@ -58,32 +60,8 @@ spec:
       postgresqlDatabase: authentik
       postgresqlPassword: ${SECRET_AUTHENTIK_POSTGRES_PASSWORD}
 
-      resources:
-        requests:
-          cpu: 15m
-          memory: 105M
-        limits:
-          cpu: 100m
-          memory: 200M
-
     redis:
       enabled: true
-      image:
-        repository: library/redis
-        tag: "6.2.6"
-
-    resources:
-      server:
-        requests:
-          cpu: 15m
-          memory: 105M
-        limits:
-          cpu: 387m
-          memory: 611M
-      worker:
-        requests:
-          cpu: 15m
-          memory: 105M
-        limits:
-          cpu: 183m
-          memory: 606M
+      auth:
+        enabled: true
+        password: ${SECRET_AUTHENTIK_REDIS_PASSWORD}
