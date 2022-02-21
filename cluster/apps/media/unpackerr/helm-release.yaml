@@ -1,0 +1,39 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: unpackerr
+  namespace: media
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: unpackerr
+      version: 5.2.0
+      sourceRef:
+        kind: HelmRepository
+        name: k8s-at-home-charts
+        namespace: flux-system
+      interval: 5m
+  install:
+    createNamespace: true
+  values:
+    image:
+      repository: docker.io/golift/unpackerr
+      tag: 0.9.9
+    env:
+      TZ: ${TIMEZONE}
+      UN_SONARR_0_URL: http://sonarr:8989
+      UN_SONARR_0_PATHS_0: /complete/downloads
+      UN_RADARR_0_URL: http://radarr:7878
+      UN_RADARR_0_PATHS_0: /complete/downloads
+    envFrom:
+      - secretRef:
+          name: unpackerr
+    persistence:
+      config:
+        enabled: false
+      complete:
+        enabled: true
+        existingClaim: media-nfs-media-pvc
+        mountPath: /complete
