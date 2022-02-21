@@ -153,10 +153,14 @@ spec:
       dashboards:
         enabled: true
         searchNamespace: ALL
+        folderAnnotation: grafana_folder
+        provider:
+          foldersFromFilesStructure: true
       datasources:
         enabled: true
         searchNamespace: ALL
-
+    serviceMonitor:
+      enabled: true
     resources:
       requests:
         cpu: 22m

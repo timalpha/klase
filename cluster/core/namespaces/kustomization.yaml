@@ -9,3 +9,4 @@ resources:
   - longhorn-system.yaml
   - default.yaml
   - monitoring.yaml
+  - security.yaml
