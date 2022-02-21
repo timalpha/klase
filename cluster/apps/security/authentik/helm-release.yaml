@@ -43,7 +43,6 @@ spec:
     authentik:
       log_level: debug
       postgresql:
-        host: "authentik-postgres"
         name: "postgres"
         user: "postgres"
       secret_key: ${SECRET_AUTHENTIK_KEY}
