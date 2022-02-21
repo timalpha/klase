@@ -22,15 +22,6 @@ spec:
     - name: kube-prometheus-stack
       namespace: monitoring
 
-  install:
-    createNamespace: true
-    remediation:
-      retries: 3
-
-  upgrade:
-    remediation:
-      retries: 3
-
   values:
     image:
       repository: ghcr.io/k8s-at-home/grafana
@@ -39,8 +30,6 @@ spec:
       runAsGroup: 568
       fsGroup: 568
       fsGroupChangePolicy: "OnRootMismatch"
-    deploymentStrategy:
-      type: Recreate
 
     env:
       GF_EXPLORE_ENABLED: true
@@ -145,9 +134,6 @@ spec:
         node-exporter-full:
           url: https://grafana.com/api/dashboards/1860/revisions/22/download
           datasource: Prometheus
-
-    podAnnotations:
-      configmap.reloader.stakater.com/reload: "grafana"
 
     sidecar:
       dashboards:
