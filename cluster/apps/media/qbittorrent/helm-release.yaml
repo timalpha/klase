@@ -73,8 +73,8 @@ spec:
             secretName: qbittorrent-cert
     resources:
       requests:
-        cpu: 48m
-        memory: 272M
+        cpu: 1
+        memory: 1Gi
       limits:
         cpu: 2
         memory: 2Gi

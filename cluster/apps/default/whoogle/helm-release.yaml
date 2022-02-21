@@ -35,8 +35,8 @@ spec:
             secretName: "whoogle-tls"
     resources:
       requests:
-        cpu: 22m
-        memory: 110M
+        cpu: 50m
+        memory: 164M
       limits:
         cpu: 213m
         memory: 503M
