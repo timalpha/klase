@@ -10,5 +10,5 @@ resources:
   - sonarr
   - radarr
   - prowlarr
-  - ombi
+  # - ombi
   - bazarr
