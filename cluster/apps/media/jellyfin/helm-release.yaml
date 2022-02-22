@@ -82,10 +82,10 @@ spec:
                     - "true"
     resources:
       requests:
-        cpu: 15m
-        memory: 477M
+        cpu: 1
+        memory: 2Gi
         gpu.intel.com/i915: 1
       limits:
-        cpu: 1
-        memory: 2028M
-        gpu.intel.com/i915: 1
+        cpu: 2
+        memory: 4Gi
+        gpu.intel.com/i915: 2
