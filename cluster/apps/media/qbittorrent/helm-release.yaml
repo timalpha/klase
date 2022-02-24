@@ -84,7 +84,7 @@ spec:
         hosts:
           - host: "qb.${SECRET_DOMAIN}"
             paths:
-              - path: /
+              - path: /api
                 pathType: Prefix
         tls:
           - hosts:
