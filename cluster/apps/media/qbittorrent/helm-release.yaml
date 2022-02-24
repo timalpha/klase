@@ -75,6 +75,7 @@ spec:
               - "qb.${SECRET_DOMAIN}"
             secretName: qbittorrent-cert
       api:
+        enabled: true
         ingressClassName: "traefik"
         annotations:
           cert-manager.io/cluster-issuer: "letsencrypt-production"
