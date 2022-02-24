@@ -19,4 +19,4 @@ metadata:
 spec:
   chain:
     middlewares:
-      - name: rfc1918-ips
+      - name: rfc1918-ips@kubernetescrd
