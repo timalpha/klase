@@ -42,6 +42,7 @@ spec:
           hajimari.io/enable: "true"
           hajimari.io/icon: "badge-account-horizontal"
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+          traefik.ingress.kubernetes.io/router.middlewares: "networking-internal-auth@kubernetescrd"
         hosts:
           - host: "cv.${SECRET_DOMAIN}"
             paths:

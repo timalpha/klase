@@ -14,7 +14,6 @@ spec:
       - "PUT"
     accessControlAllowOriginList:
       - "https://${SECRET_DOMAIN}"
-      - "https://hajimari.${SECRET_DOMAIN}"
     # accessControlAllowOriginListRegex:
     # -"https://"
     accessControlMaxAge: 100

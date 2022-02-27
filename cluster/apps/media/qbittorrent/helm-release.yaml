@@ -64,7 +64,7 @@ spec:
           hajimari.io/enable: "true"
           hajimari.io/icon: "download-network"
           traefik.ingress.kubernetes.io/router.entrypoints: websecure
-          traefik.ingress.kubernetes.io/router.middlewares: "networking-secure-headers@kubernetescrd"
+          traefik.ingress.kubernetes.io/router.middlewares: "networking-internal-auth@kubernetescrd"
         hosts:
           - host: "qb.${SECRET_DOMAIN}"
             paths:
