@@ -11,7 +11,7 @@ spec:
   upgrade:
     remediation:
       retries: 3
-  interval: 5m
+  interval: 10m
   chart:
     spec:
       # renovate: registryUrl=https://charts.longhorn.io
@@ -21,10 +21,10 @@ spec:
         kind: HelmRepository
         name: longhorn
         namespace: flux-system
-      interval: 5m
+      interval: 10m
   values:
     persistence:
-      defaultClassReplicaCount: 1
+      defaultClassReplicaCount: 2
       defaultFsType: ext4
     defaultSettings:
       backupTarget: ${NAS_BACKUP}
