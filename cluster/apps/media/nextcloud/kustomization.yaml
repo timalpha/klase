@@ -7,3 +7,4 @@ resources:
   - nextcloud-config.yaml
   - nextcloud-postgresql.yaml
   - media-nfs-nextcloud.yaml
+  - secret.yaml
