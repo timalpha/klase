@@ -29,23 +29,22 @@ spec:
       fsGroup: 568
       fsGroupChangePolicy: "OnRootMismatch"
     ingress:
-      main:
-        enabled: true
-        ingressClassName: "traefik"
-        annotations:
-          cert-manager.io/cluster-issuer: "letsencrypt-production"
-          hajimari.io/enable: "true"
-          hajimari.io/icon: "account-check"
-          traefik.ingress.kubernetes.io/router.entrypoints: websecure
-        hosts:
-          - host: "auth.${SECRET_DOMAIN}"
-            paths:
-              - path: /
-                pathType: Prefix
-        tls:
-          - hosts:
-              - "auth.${SECRET_DOMAIN}"
-            secretName: authentik-cert
+      enabled: true
+      ingressClassName: "traefik"
+      annotations:
+        cert-manager.io/cluster-issuer: "letsencrypt-production"
+        hajimari.io/enable: "true"
+        hajimari.io/icon: "account-check"
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+      hosts:
+        - host: "auth.${SECRET_DOMAIN}"
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - hosts:
+            - "auth.${SECRET_DOMAIN}"
+          secretName: authentik-cert
     geoip:
       enabled: false
     authentik:
