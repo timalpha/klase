@@ -24,9 +24,9 @@ spec:
       repository: ghcr.io/goauthentik/server
       tag: stable
     podSecurityContext:
-      runAsUser: 568
-      runAsGroup: 568
-      fsGroup: 568
+      runAsUser: 1001
+      runAsGroup: 1001
+      fsGroup: 1001
       fsGroupChangePolicy: "OnRootMismatch"
     ingress:
       enabled: true
@@ -71,9 +71,9 @@ spec:
       primary:
         podSecurityContext:
           enabled: true
-          runAsUser: 568
-          runAsGroup: 568
-          fsGroup: 568
+          runAsUser: 1001
+          runAsGroup: 1001
+          fsGroup: 1001
           fsGroupChangePolicy: "OnRootMismatch"
 
     redis:
@@ -86,14 +86,14 @@ spec:
           existingClaim: authentik-redis-pvc
         podSecurityContext:
           enabled: true
-          runAsUser: 568
-          runAsGroup: 568
-          fsGroup: 568
+          runAsUser: 1001
+          runAsGroup: 1001
+          fsGroup: 1001
           fsGroupChangePolicy: "OnRootMismatch"
       replica:
         podSecurityContext:
           enabled: true
-          runAsUser: 568
-          runAsGroup: 568
-          fsGroup: 568
+          runAsUser: 1001
+          runAsGroup: 1001
+          fsGroup: 1001
           fsGroupChangePolicy: "OnRootMismatch"
