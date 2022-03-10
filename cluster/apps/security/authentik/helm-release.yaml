@@ -22,7 +22,7 @@ spec:
   values:
     image:
       repository: ghcr.io/goauthentik/server
-      tag: 2022.2.1
+      tag: stable
     podSecurityContext:
       runAsUser: 568
       runAsGroup: 568
@@ -55,12 +55,8 @@ spec:
         docker_image_base: ghcr.io/goauthentik/%(type)s:%(version)s
 
       postgresql:
-        host: '{{ .Release.Name }}-postgresql'
-        name: authentik
-        user: authentik
         password: ${SECRET_AUTHENTIK_POSTGRES_PASSWORD}
       redis:
-        host: '{{ .Release.Name }}-redis-master'
         password: ${SECRET_AUTHENTIK_REDIS_PASSWORD}
 
     postgresql:
@@ -72,6 +68,13 @@ spec:
       postgresqlUsername: authentik
       postgresqlDatabase: authentik
       postgresqlPassword: ${SECRET_AUTHENTIK_POSTGRES_PASSWORD}
+      primary:
+        podSecurityContext:
+          enabled: true
+          runAsUser: 568
+          runAsGroup: 568
+          fsGroup: 568
+          fsGroupChangePolicy: "OnRootMismatch"
 
     redis:
       enabled: true
@@ -81,3 +84,16 @@ spec:
       master:
         persistence:
           existingClaim: authentik-redis-pvc
+        podSecurityContext:
+          enabled: true
+          runAsUser: 568
+          runAsGroup: 568
+          fsGroup: 568
+          fsGroupChangePolicy: "OnRootMismatch"
+      replica:
+        podSecurityContext:
+          enabled: true
+          runAsUser: 568
+          runAsGroup: 568
+          fsGroup: 568
+          fsGroupChangePolicy: "OnRootMismatch"
