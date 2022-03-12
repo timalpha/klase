@@ -10,3 +10,4 @@ resources:
   - default.yaml
   - monitoring.yaml
   - security.yaml
+  - home.yaml
