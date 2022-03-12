@@ -10,3 +10,4 @@ resources:
   - longhorn-system
   - monitoring
   - security
+  - home
