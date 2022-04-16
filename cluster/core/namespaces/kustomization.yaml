@@ -12,3 +12,4 @@ resources:
   # - security.yaml
   - home.yaml
   - home-automation.yaml
+  - system-upgrade.yaml
