@@ -62,13 +62,6 @@ spec:
               resources:
                 requests:
                   storage: 1Gi
-      resources:
-        requests:
-          cpu: 10m
-          memory: 53M
-        limits:
-          cpu: 15m
-          memory: 53M
 
     kube-state-metrics:
       fullnameOverride: kube-state-metrics
@@ -136,15 +129,6 @@ spec:
           - hosts:
               - prometheus.${SECRET_DOMAIN}
             secretName: prom-server-cert
-      resources:
-        requests:
-          cpu: 22m
-          memory: 978M
-        limits:
-          cpu: 88m
-          memory: 1544M
-      thanosService:
-        enabled: true
 
       prometheusSpec:
         replicas: 1
