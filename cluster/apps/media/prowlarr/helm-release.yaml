@@ -52,10 +52,3 @@ spec:
           - hosts:
               - "prowlarr.${SECRET_DOMAIN}"
             secretName: prowlarr-cert
-    resources:
-      requests:
-        cpu: 15m
-        memory: 226M
-      limits:
-        cpu: 15m
-        memory: 287M
