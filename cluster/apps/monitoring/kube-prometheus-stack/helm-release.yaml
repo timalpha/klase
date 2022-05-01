@@ -50,10 +50,10 @@ spec:
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
           traefik.ingress.kubernetes.io/router.middlewares: networking-rfc1918-ips@kubernetescrd
         hosts:
-          - "alert-manager.${SECRET_DOMAIN}"
+          - alert-manager.${SECRET_DOMAIN}
         tls:
           - hosts:
-              - "alert-manager.${SECRET_DOMAIN}"
+              - alert-manager.${SECRET_DOMAIN}
             secretName: alert-manager-cert
       alertmanagerSpec:
         storage:
@@ -133,10 +133,10 @@ spec:
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
           traefik.ingress.kubernetes.io/router.middlewares: networking-rfc1918-ips@kubernetescrd
         hosts:
-          - "prometheus.${SECRET_DOMAIN}"
+          - prometheus.${SECRET_DOMAIN}
         tls:
           - hosts:
-              - "prometheus.${SECRET_DOMAIN}"
+              - prometheus.${SECRET_DOMAIN}
             secretName: prom-server-cert
       resources:
         requests:
