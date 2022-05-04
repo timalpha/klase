@@ -12,3 +12,4 @@ resources:
   - redirect-path.yaml
   - rfc1918.yaml
   - secure-headers.yaml
+  - local-only-access.yaml
