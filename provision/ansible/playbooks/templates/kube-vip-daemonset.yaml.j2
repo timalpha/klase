@@ -64,6 +64,16 @@ spec:
           ip: 127.0.0.1
       hostNetwork: true
       serviceAccountName: kube-vip
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: node-role.kubernetes.io/master
+                    operator: Exists
+              - matchExpressions:
+                  - key: node-role.kubernetes.io/control-plane
+                    operator: Exists
       tolerations:
         - effect: NoSchedule
           operator: Exists
