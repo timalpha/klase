@@ -10,8 +10,8 @@ spec:
     spec:
       chart: /charts/kah-common
       sourceRef:
-        kind: GitRepository
-        name: flux-system
+        kind: HelmRepository
+        name: k8s-at-home
         namespace: flux-system
       interval: 5m
   dependsOn:
