@@ -11,3 +11,4 @@ resources:
   - monitoring.yaml
   - security.yaml
   - home.yaml
+  - home-automation.yaml
