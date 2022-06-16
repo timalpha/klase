@@ -3,10 +3,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - default
+  - flux-system
+  - home-automation
   - kube-system
+  - longhorn-system
+  - media
+  - monitoring
   - networking
   - system-upgrade
-  - media
-  - longhorn-system
-  - monitoring
-  - home-automation
