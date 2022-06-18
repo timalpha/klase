@@ -9,6 +9,6 @@ resources:
   - media
   - longhorn-system
   - monitoring
-  - security
+#  - security
   - home
   - home-automation

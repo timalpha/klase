@@ -9,6 +9,6 @@ resources:
   - longhorn-system.yaml
   - default.yaml
   - monitoring.yaml
-  - security.yaml
+  # - security.yaml
   - home.yaml
   - home-automation.yaml
