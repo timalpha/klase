@@ -18,7 +18,9 @@ spec:
       interval: 5m
   dependsOn:
     - name: cert-manager
-      namespace: cert-manager
+      namespace: kube-system
+    - name: metallb
+      namespace: networking
   values:
     deployment:
       kind: Deployment
