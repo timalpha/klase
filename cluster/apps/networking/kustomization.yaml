@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - cloudflare-ddns
   - external-dns
+  - metallb
   - k8s-gateway
   - traefik
   - error-pages
