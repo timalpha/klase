@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: esphome
-  namespace: home
+  namespace: home-automation
 spec:
   releaseName: esphome
   interval: 10m
