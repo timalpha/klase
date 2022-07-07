@@ -2,9 +2,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - cloudflare-ddns
+  - namespace.yaml
   - external-dns
+  - ingress-nginx
   - metallb
   - k8s-gateway
-  - traefik
-  - error-pages
