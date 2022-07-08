@@ -11,7 +11,7 @@ spec:
   upgrade:
     remediation:
       retries: 3
-  interval: 10m
+  interval: 15m
   chart:
     spec:
       # renovate: registryUrl=https://charts.longhorn.io
@@ -21,7 +21,7 @@ spec:
         kind: HelmRepository
         name: longhorn
         namespace: flux-system
-      interval: 10m
+      interval: 15m
   values:
     persistence:
       defaultClassReplicaCount: 2
@@ -33,15 +33,18 @@ spec:
       storageMinimalAvailablePercentage: 10
     ingress:
       enabled: true
-      ingressClassName: "traefik"
+      ingressClassName: "nginx"
       annotations:
         cert-manager.io/cluster-issuer: "letsencrypt-production"
         hajimari.io/enable: "true"
         hajimari.io/icon: "harddisk"
         hajimari.io/appName: "longhorn"
-        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-        traefik.ingress.kubernetes.io/router.middlewares: "networking-internal-only@kubernetescrd"
-      host: "longhorn.${SECRET_DOMAIN}"
-
-      tls: true
-      tlsSecret: "longhorn-tls"
+        nginx.ingress.kubernetes.io/whitelist-source-range: "10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
+        hosts:
+          - host: &host "longhorn.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathType: Prefix
+        tls:
+          - hosts:
+              - *host

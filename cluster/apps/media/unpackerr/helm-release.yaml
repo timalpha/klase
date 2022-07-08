@@ -2,26 +2,27 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: unpackerr
+  name: &app unpackerr
   namespace: media
 spec:
-  interval: 5m
+  interval: 15m
   chart:
     spec:
-      # renovate: registryUrl=https://k8s-at-home.com/charts/
-      chart: unpackerr
-      version: 5.3.2
+      chart: kah-common-chart
+      version: 1.1.2
       sourceRef:
         kind: HelmRepository
         name: k8s-at-home-charts
         namespace: flux-system
-      interval: 5m
+      interval: 15m
   install:
     createNamespace: true
   values:
+    global:
+      nameOverride: *app
     image:
-      repository: docker.io/golift/unpackerr
-      tag: 0.10.0
+      repository: ghcr.io/onedr0p/unpackerr
+      tag: 0.10.1@sha256:1511c92ac8963f56c94ddef457e0ae18f39259a5333551b6b64889563979d129
     env:
       TZ: ${TIMEZONE}
       UN_SONARR_0_URL: http://sonarr:8989

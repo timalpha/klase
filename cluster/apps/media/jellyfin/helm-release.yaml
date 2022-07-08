@@ -8,7 +8,6 @@ spec:
   interval: 15m
   chart:
     spec:
-      # renovate: registryUrl=https://k8s-at-home.com/charts/
       chart: kah-common-chart
       version: 1.1.2
       sourceRef:
@@ -16,19 +15,27 @@ spec:
         name: k8s-at-home-charts
         namespace: flux-system
       interval: 15m
+  install:
+    createNamespace: true
   dependsOn:
-    - name: traefik
-      namespace: networking
+    - name: intel-gpu-plugin
+      namespace: kube-system
+    - name: node-feature-discovery
+      namespace: kube-system
   values:
     global:
       nameOverride: *app
     image:
       repository: ghcr.io/k8s-at-home/jellyfin
-      tag: v10.8.1
-
+      tag: 10.8.1
     env:
       TZ: "${TIMEZONE}"
       JELLYFIN_CACHE_DIR: "/config/cache"
+    service:
+      main:
+        ports:
+          http:
+            port: 8096
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1000
@@ -44,32 +51,24 @@ spec:
         - 44
         - 109
         - 1000
-
-    service:
-      main:
-        ports:
-          http:
-            port: 8096
-
     ingress:
       main:
         enabled: true
-        ingressClassName: "traefik"
+        ingressClassName: "nginx"
         annotations:
           cert-manager.io/cluster-issuer: "letsencrypt-production"
           hajimari.io/enable: "true"
           hajimari.io/icon: "movie-play"
-          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-          traefik.ingress.kubernetes.io/router.middlewares: "networking-internal-only@kubernetescrd"
+          nginx.ingress.kubernetes.io/whitelist-source-range: "10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
         hosts:
-          - host: "jellyfin.${SECRET_DOMAIN}"
+          - host: &host "jellyfin.${SECRET_DOMAIN}"
             paths:
               - path: /
                 pathType: Prefix
         tls:
           - hosts:
-              - "jellyfin.${SECRET_DOMAIN}"
-            secretName: jellyfin-cert
+              - *host
+
     persistence:
       config:
         enabled: true
