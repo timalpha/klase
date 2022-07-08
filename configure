@@ -286,8 +286,6 @@ verify_git_repository() {
     export GIT_TERMINAL_PROMPT=1
 }
 
-<<<<<<< HEAD
-=======
 setup_github_webhook() {
     WEBHOOK_SECRET="${BOOTSTRAP_FLUX_GITHUB_WEBHOOK_SECRET:-ignored}"
 
@@ -312,7 +310,6 @@ setup_github_webhook() {
     fi
 }
 
->>>>>>> fb5b38e (feat: move namespaces defs into apps and utilize fluxcd.io/prune label)
 verify_cloudflare() {
     local account_zone=
     local errors=
