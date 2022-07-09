@@ -6,4 +6,6 @@ resources:
   - flux-system
   - kube-system
   - networking
+  - media
+  - longhorn-system
   # - system-upgrade
