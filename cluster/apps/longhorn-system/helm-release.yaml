@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: longhorn
+  name: &app longhorn
   namespace: longhorn-system
 spec:
   install:
@@ -23,6 +23,8 @@ spec:
         namespace: flux-system
       interval: 15m
   values:
+    global:
+      nameOverride: *app
     persistence:
       defaultClassReplicaCount: 2
       defaultFsType: ext4
@@ -48,3 +50,4 @@ spec:
         tls:
           - hosts:
               - *host
+            secretName: "longhorn-tls"

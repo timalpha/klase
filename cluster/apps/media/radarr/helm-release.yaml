@@ -57,3 +57,4 @@ spec:
         tls:
           - hosts:
               - *host
+            secretName: "radarr-tls"

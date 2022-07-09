@@ -54,6 +54,7 @@ spec:
         tls:
           - hosts:
               - *host
+            secretName: "rxresume-tls"
     resources:
       requests:
         cpu: 15m
