@@ -56,3 +56,4 @@ spec:
         tls:
           - hosts:
               - *host
+            secretName: "bazarr-tls"
