@@ -5,9 +5,9 @@ metadata:
   name: cluster-settings
   namespace: flux-system
 data:
-  TIMEZONE: "Europe/Stockholm"
-  METALLB_LB_RANGE: 10.0.10.20-10.0.10.30
-  METALLB_K8S_GATEWAY_ADDR: 10.0.10.254
-  METALLB_INGRESS_ADDR: 10.0.10.20
+  TIMEZONE: Europe/Stockholm
+  METALLB_LB_RANGE: 10.0.10.220-10.0.10.230
+  METALLB_K8S_GATEWAY_ADDR: 10.0.10.220
+  METALLB_INGRESS_ADDR: 10.0.10.221
   NAS_ADDR: 10.0.10.10
   NAS_BACKUP: "nfs://10.0.10.10:/mnt/zp0/backup"

@@ -46,7 +46,7 @@ spec:
             - name: vip_retryperiod
               value: "2"
             - name: address
-              value: "{{ k3s_registration_address }}"
+              value: "10.0.10.254"
           securityContext:
             capabilities:
               add:

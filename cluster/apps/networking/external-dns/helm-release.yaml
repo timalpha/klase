@@ -5,23 +5,23 @@ metadata:
   name: external-dns
   namespace: networking
 spec:
-  interval: 5m
+  interval: 15m
   chart:
     spec:
       chart: external-dns
-      version: 1.8.0
+      version: 1.9.0
       sourceRef:
         kind: HelmRepository
         name: external-dns
         namespace: flux-system
-      interval: 5m
+      interval: 15m
   install:
     createNamespace: true
     remediation:
-      retries: 3
+      retries: 5
   upgrade:
     remediation:
-      retries: 3
+      retries: 5
   values:
     interval: 5m
     logLevel: debug

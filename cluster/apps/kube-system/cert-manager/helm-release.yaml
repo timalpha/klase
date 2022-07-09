@@ -5,16 +5,23 @@ metadata:
   name: cert-manager
   namespace: kube-system
 spec:
-  interval: 5m
+  interval: 15m
   chart:
     spec:
-      # renovate: registryUrl=https://charts.jetstack.io/
       chart: cert-manager
       version: v1.8.2
       sourceRef:
         kind: HelmRepository
         name: jetstack
         namespace: flux-system
+      interval: 15m
+  install:
+    createNamespace: true
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5
   values:
     installCRDs: false
     webhook:
