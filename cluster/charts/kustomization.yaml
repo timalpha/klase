@@ -14,3 +14,4 @@ resources:
   - stakater.yaml
   - weaveworks-kured.yaml
   - longhorn.yaml
+  - node-feature-discovery.yaml
