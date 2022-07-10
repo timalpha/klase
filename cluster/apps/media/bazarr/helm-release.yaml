@@ -24,6 +24,11 @@ spec:
       TZ: ${TIMEZONE}
       PUID: 1000
       PGID: 1000
+    service:
+      main:
+        ports:
+          http:
+            port: *port
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1000
