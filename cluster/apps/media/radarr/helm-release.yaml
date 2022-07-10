@@ -26,6 +26,16 @@ spec:
       tag: v4.2.0.6407
     env:
       TZ: "${TIMEZONE}"
+      RADARR__INSTANCE_NAME: Radarr
+      RADARR__PORT: &port 80
+      RADARR__BRANCH: nightly
+      RADARR__APPLICATION_URL: "https://{{ .Release.Name }}.${SECRET_DOMAIN}"
+      RADARR__LOG_LEVEL: info
+    service:
+      main:
+        ports:
+          http:
+            port: *port
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1000

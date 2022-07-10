@@ -26,6 +26,15 @@ spec:
       tag: v0.4.3.1897
     env:
       TZ: "${TIMEZONE}"
+      PROWLARR__INSTANCE_NAME: Prowlarr
+      PROWLARR__PORT: &port 80
+      PROWLARR__BRANCH: nightly
+      PROWLARR__LOG_LEVEL: info
+    service:
+      main:
+        ports:
+          http:
+            port: *port
     podSecurityContext:
       runAsUser: 1000
       runAsGroup: 1000

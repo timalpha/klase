@@ -25,9 +25,9 @@ spec:
       tag: 0.10.1@sha256:1511c92ac8963f56c94ddef457e0ae18f39259a5333551b6b64889563979d129
     env:
       TZ: ${TIMEZONE}
-      UN_SONARR_0_URL: http://sonarr:8989
+      UN_SONARR_0_URL: http://sonarr
       UN_SONARR_0_PATHS_0: /complete/downloads
-      UN_RADARR_0_URL: http://radarr:7878
+      UN_RADARR_0_URL: http://radarr
       UN_RADARR_0_PATHS_0: /complete/downloads
     envFrom:
       - secretRef:
