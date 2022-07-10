@@ -88,3 +88,4 @@ spec:
         tls:
           - hosts:
               - *host
+            secretName: "qbittorent-api-tls"
