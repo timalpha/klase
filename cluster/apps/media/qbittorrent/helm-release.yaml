@@ -25,6 +25,8 @@ spec:
       tag: v4.4.2
     env:
       TZ: "${TIMEZONE}"
+      QBITTORRENT__PORT: &port 80
+      QBITTORRENT__BT_PORT: &port-bt 50413
     settings:
       automaticPortSetup: false
     podSecurityContext:
@@ -43,17 +45,21 @@ spec:
         existingClaim: media-nfs-media-pvc
         mountPath: /media
     service:
+      main:
+        ports:
+          http:
+            port: *port
       bittorrent:
         enabled: true
         type: LoadBalancer
         externalIPs:
-          - 10.0.10.222
+          - "${SVC_QBITTORRENT_ADDR}"
         ports:
           bittorrent:
-            port: 50413
-            name: bittorrent
+            enabled: true
+            port: *port-bt
             protocol: TCP
-            targetPort: 50413
+            targetPort: *port-bt
         externalTrafficPolicy: Local
     ingress:
       main:
@@ -64,6 +70,11 @@ spec:
           hajimari.io/enable: "true"
           hajimari.io/icon: "download-network"
           nginx.ingress.kubernetes.io/whitelist-source-range: "10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
+          nginx.ingress.kubernetes.io/configuration-snippet: |
+            proxy_hide_header "x-webkit-csp";
+            proxy_hide_header "content-security-policy";
+            proxy_hide_header "X-Frame-Options";
+            proxy_set_header Accept-Encoding "";
         hosts:
           - host: &host "qb.${SECRET_DOMAIN}"
             paths:
