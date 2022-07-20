@@ -8,4 +8,4 @@ resources:
   - networking
   - media
   - longhorn-system
-  # - system-upgrade
+  - system-upgrade
