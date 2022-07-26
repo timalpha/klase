@@ -23,7 +23,7 @@ spec:
       strategy: RollingUpdate
     image:
       repository: ghcr.io/k8s-at-home/radarr-nightly
-      tag: v4.2.0.6425
+      tag: v4.2.1.6450
     env:
       TZ: "${TIMEZONE}"
       RADARR__INSTANCE_NAME: Radarr
