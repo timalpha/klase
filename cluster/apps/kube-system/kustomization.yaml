@@ -6,7 +6,6 @@ resources:
   - cert-manager
   - kured
   - metrics-server
-  - reflector
   - reloader
   - node-feature-discovery
   - intel-gpu-plugin

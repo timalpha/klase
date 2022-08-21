@@ -17,5 +17,3 @@
 | Dell Optiplex 5050  | 1     | 8 GB | 256 NVMe |              | Master  | Fedora Server 36    |
 
 ## :handshake:&nbsp; Community
-
-This cluster in inspired by the work of others shared at [awesome-home-kubernetes](https://github.com/k8s-at-home/awesome-home-kubernetes).
