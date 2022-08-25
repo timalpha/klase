@@ -15,5 +15,3 @@
 | Dell Optiplex 3040  | 1     | 8 GB | 120 SSD  | 1TB NVMe     | Master  | Fedora Server 36    |
 | Dell Optiplex 3040  | 1     | 32 GB| 120 SSD  | 1TB NVMe     | Master  | Fedora Server 36    |
 | Dell Optiplex 5050  | 1     | 8 GB | 256 NVMe |              | Master  | Fedora Server 36    |
-
-## :handshake:&nbsp; Community
