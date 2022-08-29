@@ -32,7 +32,17 @@ spec:
       UN_RADARR_0_PATHS_0: /complete/downloads
     envFrom:
       - secretRef:
-          name: unpackerr
+          name: *app
+    service:
+      main:
+        enabled: false
+    probes:
+      liveness:
+        enabled: false
+      readiness:
+        enabled: false
+      startup:
+        enabled: false
     persistence:
       config:
         enabled: false
